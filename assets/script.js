@@ -36,9 +36,11 @@ function showCopyNotification() {
 
     setTimeout(()=>{
         notification.remove();
-    },2000);
+    },9000000);
 }
 const container = document.getElementById("keyContainer");
+const asciiInput = document.getElementById("asciiInput")
+
 container.innerHTML = generateHtml("-","-","-");
 
 window.addEventListener("keydown",(e)=>{
@@ -53,4 +55,10 @@ window.addEventListener("keydown",(e)=>{
     })
 });
 
+function isMobileOrTablet() {
+    return /Android|iphone|ipad|ipod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
+if (isMobileOrTablet()) {
+    asciiInput.style.display = "block";
+}

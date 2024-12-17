@@ -27,6 +27,7 @@ a {
 body {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   overflow-x: hidden;
   justify-content: center;
   align-items: center;
@@ -40,6 +41,7 @@ body {
   font-size: 10px;
   padding: 5rem;
 }
+
 header {
   display: flex;
   top: 10%;
@@ -56,7 +58,7 @@ header {
 }
 .key {
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: white;
 }
 .container {
   display: flex;
@@ -70,6 +72,24 @@ header {
   transition: background 0.3s cubic-bezier(0.3, 0.6, 0.83, 0.67);
   animation: fadeIn 1s ease-out forwards;
 }
+
+input {
+    padding: .9rem;
+    border-radius: 1.2rem;
+    background-color: var(--highlight-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+
+    padding: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease-in-out;
+    animation: slideIn 0.8s ease-out backwards;
+    border: .2rem solid var(--border-bg);
+  }
+  .enter{
+    color: var(--highlight-color);
+    font-weight: bold;
+  }
 
 .container:hover {
   background: var(--container-hover-bg);
